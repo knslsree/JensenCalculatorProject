@@ -14,13 +14,10 @@ public class Calculator {
 	static boolean equalpress = false;
 
 	 /**
-	   * Launch the application through JFrame Window/Frame management
+	   * Launch the application through JFrame Window/Frame management.
 	   * In Window, created textField to accept the numbers, to display 
-	   * the result after calculation. 
-	   * Buttons are created to enable entering the numbers and perform 
-	   * the operations.
-	   * Internally SwingUtilities has been used .
-	   */ 
+	   * the result after calculation.
+	   */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -79,18 +76,8 @@ public class Calculator {
 		Ui.CreateButton9(frame, textField);
 		Ui.CreateButton6(frame, textField);
 		Ui.CreateButton3(frame, textField);
-		/**
-		 * The boundary values, font are set 
-		 * and the button equal is added to the frame
-		 * when the equal button is pressed it checks the 
-		 * operation to be performed (+,-,%,/,√) based on the operation button pressed
-		 * and takes the recent number in the textField as second number
-		*/
+
 		Op.CreateButtonEQ(frame, textField);
-		/**
-		 * Determine the first number when operation button +,-,*,/,% and √ is pressed
-		 * and clear the textField for the second number 
-		*/
 		Op.CreateButtonSQRT(frame, textField);
 		Op.CreateButtonADD(frame, textField);
 		Op.CreateButtonSUB(frame, textField);
@@ -100,6 +87,3 @@ public class Calculator {
 		
 	}
 }
-
-
-

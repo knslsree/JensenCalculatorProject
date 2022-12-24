@@ -6,28 +6,14 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 
 public class CreateOperator {
-	/**
-	 * The boundary values, font are set and the button Square root is added to the
-	 * frame Square root operation will be performed only if the textField is not
-	 * blank The textField shall be set to zero for the first press
-	 */
-	public void CreateButtonSQRT(JFrame frame, JTextField textField) {
-		JButton btnSqrt = new JButton("√");
-		btnSqrt.setBounds(123, 73, 58, 29);
-		btnSqrt.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (!textField.getText().isBlank()) {
-					Calculator.first = Double.parseDouble(textField.getText());
-					Calculator.operation = "√";
-				} else {
-					textField.setText("0");
-				}
-			}
-		});
-		btnSqrt.setFont(new Font("Tahoma", Font.BOLD, 18));
-		frame.getContentPane().add(btnSqrt);
-	}
 	
+	/**
+	 * The boundary values, font are set 
+	 * and the button equal is added to the frame
+	 * when the equal button is pressed it checks the 
+	 * operation to be performed (+,-,%,/,√) based on the operation button pressed
+	 * and takes the recent number in the textField as second number
+	*/
 	public void CreateButtonEQ(JFrame frame, JTextField textField) {
 		JButton btnEqual = new JButton("=");
 		btnEqual.setBounds(123, 176, 58, 29);
@@ -74,6 +60,29 @@ public class CreateOperator {
 		});
 		btnEqual.setFont(new Font("Tahoma", Font.BOLD, 18));
 		frame.getContentPane().add(btnEqual);
+	}
+	
+	/**
+	 * The boundary values, font are set and the button for arithmetic operations Addition, 
+	 * Subtraction, Multiplication, Division, Remainder and Square root are added to the frame.
+	 * The arithmetic operation will be performed only if the textField is not blank,
+	 * or number is available. Otherwise, textField shall be set to zero.
+	 */
+	public void CreateButtonSQRT(JFrame frame, JTextField textField) {
+		JButton btnSqrt = new JButton("√");
+		btnSqrt.setBounds(123, 73, 58, 29);
+		btnSqrt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!textField.getText().isBlank()) {
+					Calculator.first = Double.parseDouble(textField.getText());
+					Calculator.operation = "√";
+				} else {
+					textField.setText("0");
+				}
+			}
+		});
+		btnSqrt.setFont(new Font("Tahoma", Font.BOLD, 18));
+		frame.getContentPane().add(btnSqrt);
 	}
 	
 	public void CreateButtonADD(JFrame frame, JTextField textField) {
