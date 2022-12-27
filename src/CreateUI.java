@@ -6,10 +6,14 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 
 public class CreateUI{
-	/**
-	 * The boundary values, font are set and the button UI for numbers are added
-	 * to the frame.
-	 */
+	 /**
+	 * The boundary values, font are set and the button UI 
+	 * for numbers are added to the frame.
+	 * And declare a String backspace and assign null to it.
+	 * For the backspace operation, length of the textField is
+	 * checked and is reduced by 1 for every button press
+	 * and refreshes the textField with new String
+	 **/ 
 	
 	public void CreateButtonBackspace(JFrame frame,JTextField textField ) {
 		JButton btnBackspace = new JButton("\uF0E7");

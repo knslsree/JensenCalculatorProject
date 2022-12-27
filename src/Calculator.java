@@ -57,12 +57,7 @@ public class Calculator {
 		
 		CreateUI Ui=new CreateUI();
 		CreateOperator Op=new CreateOperator();
-		/**
-		 * Declare a String backspace and assign null to it
-		 * For the backspace operation, length of the textField is
-		 * checked and is reduced by 1 for every button press
-		 * and refreshes the textField with new String
-		*/ 
+
 		Ui.CreateButtonBackspace(frame,textField);
 		Ui.CreateButton1(frame, textField);
 		Ui.CreateButton2(frame, textField);
